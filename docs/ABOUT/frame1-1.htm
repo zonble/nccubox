@@ -11,7 +11,7 @@
 <!--Java-->
 <script language="JavaScript">
 <!---
-//ÀË¬d¬O§_¬°Netscape Navigator 3.0ª©¥H¤W
+//æª¢æŸ¥æ˜¯å¦ç‚ºNetscape Navigator 3.0ç‰ˆä»¥ä¸Š
 agent = navigator.userAgent;
 browserVer = 2;
 if (agent.substring(0,7) == "Mozilla")
@@ -19,7 +19,7 @@ if (agent.substring(0,7) == "Mozilla")
     if (parseInt(agent.substring(8,9)) >= 3) {browserVer = 1;}
 }
 
-// ¹w¥ı¸ü¤J¹Ï¤ù
+// é å…ˆè¼‰å…¥åœ–ç‰‡
 if (browserVer == 1) {
 chnnl = new Image(60,70);
 chnnl.src = "GIF/SIDEBAR/chnnl-b.gif";
@@ -36,7 +36,7 @@ helpt.src = "GIF/SIDEBAR/help.gif";
 }
 
 function hiLite(imgDocID,imgObjName) {
-//  mouseOver ¨Æ¥óÅX°Êicon change
+//  mouseOver äº‹ä»¶é©…å‹•icon change
 //   imgDocID - the name or number of the document image to be replaced
 //   imgObjName - the name of the image object to be swapped in
 
@@ -56,22 +56,22 @@ document.images[imgDocID].src = eval(imgObjName + ".src");
 <p>
 
 <a href=DOCS/CHANNEL/.htm target=main
-        onmouseover="window.status='­q¾\²°¤lÀW¹D';hiLite('chnnl','chnnl');return true"
+        onmouseover="window.status='è¨‚é–±ç›’å­é »é“';hiLite('chnnl','chnnl');return true"
         onmouseout="hiLite('chnnl','chnnlt')">
-<img src=GIF/SIDEBAR/chnnl.gif width=50 border=0 name="chnnl" alt="­q¾\¡u²°¤l¡v¡A¥[¤J±zªºÀW¹D"><br>
-<font size=-2>­q¾\²°¤l</font><p></a>
+<img src=GIF/SIDEBAR/chnnl.gif width=50 border=0 name="chnnl" alt="è¨‚é–±ã€Œç›’å­ã€ï¼ŒåŠ å…¥æ‚¨çš„é »é“"><br>
+<font size=-2>è¨‚é–±ç›’å­</font><p></a>
 
 <a href=SEARCH/query.htm target=main
-        onmouseover="window.status='³s©¹¡u²°¤l¡D¹D«n¥Í¬¡ºô¸ô»x¡v¥ş¤å¯Á¤Ş';hiLite('search','search');return true"
+        onmouseover="window.status='é€£å¾€ã€Œç›’å­ï¼é“å—ç”Ÿæ´»ç¶²è·¯èªŒã€å…¨æ–‡ç´¢å¼•';hiLite('search','search');return true"
         onmouseout="hiLite('search','searcht')">
-<img src=GIF/SIDEBAR/search.gif width=50 border=0 name="search" alt="³s©¹¥ş¤å¯Á¤Ş"><br>
-<font size=-2>¥ş¤å¯Á¤Ş</font><p></a>
+<img src=GIF/SIDEBAR/search.gif width=50 border=0 name="search" alt="é€£å¾€å…¨æ–‡ç´¢å¼•"><br>
+<font size=-2>å…¨æ–‡ç´¢å¼•</font><p></a>
 
 <a href=../nethelp/welcome.htm target=main
-        onmouseover="window.status='³s©¹¡u²°¤l¡D¹D«n¥Í¬¡ºô¸ô»x¡v»²§U»¡©ú';hiLite('help','help');return true"
+        onmouseover="window.status='é€£å¾€ã€Œç›’å­ï¼é“å—ç”Ÿæ´»ç¶²è·¯èªŒã€è¼”åŠ©èªªæ˜';hiLite('help','help');return true"
         onmouseout="hiLite('help','helpt')">
-<img src=GIF/SIDEBAR/help.gif width=50 border=0 name="help" alt="³s©¹»²§U»¡©ú"><br>
-<font size=-2>»²§U»¡©ú</font><p></a>
+<img src=GIF/SIDEBAR/help.gif width=50 border=0 name="help" alt="é€£å¾€è¼”åŠ©èªªæ˜"><br>
+<font size=-2>è¼”åŠ©èªªæ˜</font><p></a>
 
 </center>
 </td></tr></table>
