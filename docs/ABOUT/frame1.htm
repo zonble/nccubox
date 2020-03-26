@@ -1,0 +1,85 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+<META NAME="Content-Language"	CONTENT="zh-TW">
+<META NAME="Coverage" 		CONTENT="Taiwan">
+<HTML VERSION = "-//IETF/DTD HTML//EN//3.2">
+<TITLE></TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff" LINK="#0000FF" VLINK="#0000FF" ALINK="#FF0000">
+
+<!--Java-->
+<script language="JavaScript">
+<!---
+//檢查是否為Netscape Navigator 3.0版以上
+agent = navigator.userAgent;
+browserVer = 2;
+if (agent.substring(0,7) == "Mozilla")
+{
+    if (parseInt(agent.substring(8,9)) >= 3) {browserVer = 1;}
+}
+
+// 預先載入圖片
+if (browserVer == 1) {
+S99 = new Image(60,70);
+S99.src = "GIF/SIDEBAR/S99-b.gif";
+S99t = new Image(60,70);
+S99t.src = "GIF/SIDEBAR/S99.gif";
+box = new Image(60,70);
+box.src = "GIF/SIDEBAR/box-b.gif";
+boxt = new Image(60,70);
+boxt.src = "GIF/SIDEBAR/box.gif";
+index = new Image(60,70);
+index.src = "GIF/SIDEBAR/index-b.gif";
+indext = new Image(60,70);
+indext.src = "GIF/SIDEBAR/index.gif";
+vol7 = new Image(60,70);
+vol7.src = "GIF/VOL2/vol7t.gif";
+vol7t = new Image(60,70);
+vol7t.src = "GIF/VOL2/vol7.gif";
+}
+
+function hiLite(imgDocID,imgObjName) {
+//  mouseOver 事件驅動icon change
+//   imgDocID - the name or number of the document image to be replaced
+//   imgObjName - the name of the image object to be swapped in
+
+if (browserVer == 1) {
+document.images[imgDocID].src = eval(imgObjName + ".src");
+}
+}
+//---->
+</script>
+
+<table border=0><tr><td>
+<center>
+<a href=frame1-1.htm>
+<img src=GIF/SIDEBAR/a-r.gif border=0></a><p>
+
+<a href=../../welcome.htm target=_top
+        onmouseover="window.status='連往「伺服器玖玖」首頁';hiLite('S99','S99');return true"
+        onmouseout="hiLite('S99','S99t')">
+<img src=GIF/SIDEBAR/s99.gif width=50 border=0 name="S99" alt="連往伺服器玖玖"><br>
+<font size=-2>伺服器玖玖</font><p></a>
+
+<a href=index.htm target=main
+        onmouseover="window.status='連往「盒子．道南生活網路誌」首頁';hiLite('box','box');return true"
+        onmouseout="hiLite('box','boxt')">
+<img src=GIF/SIDEBAR/box.gif width=50 border=0 name="box" alt="連往盒子首頁"><br>
+<font size=-2>盒子主畫面</font><p></a>
+
+<a href=../ABOUT/vols.htm target=main
+        onmouseover="window.status='連往「盒子．道南生活網路誌」期數索引';hiLite('index','index');return true"
+        onmouseout="hiLite('index','indext')">
+<img src=GIF/SIDEBAR/index.gif width=50 border=0 name="index" alt="連往期數索引"><br>
+<font size=-2>期數索引</font><p></a>
+
+<a href=../VOL7/welcome.htm 
+	onmouseover="window.status='連往最新一期的「盒子」';hiLite('vol7','vol7');return true"
+        onmouseout="hiLite('vol7','vol7t')"
+	target=main>
+<img src=GIF/VOL2/vol7.gif width=50 border=0 name="vol7" alt="本期盒子"><br>
+<font size=-2>本期盒子</font><p></a>
+</center>
+</td></tr></table>
+</BODY></HTML>

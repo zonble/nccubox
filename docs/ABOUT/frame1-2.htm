@@ -1,0 +1,95 @@
+<HTML VERSION = "-//IETF/DTD HTML//EN//3.2">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+<META NAME="Content-Language"	CONTENT="zh-TW">
+<META NAME="Coverage" 		CONTENT="Taiwan">
+
+<TITLE></TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<!--Java-->
+<script language="JavaScript">
+<!---
+//檢查是否為Netscape Navigator 3.0版以上
+agent = navigator.userAgent;
+browserVer = 2;
+if (agent.substring(0,7) == "Mozilla")
+{
+    if (parseInt(agent.substring(8,9)) >= 3) {browserVer = 1;}
+}
+
+// 預先載入圖片
+if (browserVer == 1) {
+vol1 = new Image(60,70);
+vol1.src = "GIF/VOL2/vol1t.gif";
+vol1t = new Image(60,70);
+vol1t.src = "GIF/VOL2/vol1.gif";
+vol2 = new Image(60,70);
+vol2.src = "GIF/VOL2/vol2t.gif";
+vol2t = new Image(60,70);
+vol2t.src = "GIF/VOL2/vol2.gif";
+vol3 = new Image(60,70);
+vol3.src = "GIF/VOL2/vol3t.gif";
+vol3t = new Image(60,70);
+vol3t.src = "GIF/VOL2/vol3.gif";
+vol4 = new Image(60,70);
+vol4.src = "GIF/VOL2/vol4t.gif";
+vol4t = new Image(60,70);
+vol4t.src = "GIF/VOL2/vol4.gif";
+}
+
+function hiLite(imgDocID,imgObjName) {
+//  mouseOver 事件驅動icon change
+//   imgDocID - the name or number of the document image to be replaced
+//   imgObjName - the name of the image object to be swapped in
+
+if (browserVer == 1) {
+document.images[imgDocID].src = eval(imgObjName + ".src");
+}
+}
+//---->
+</script>
+
+<table border=0><tr><td>
+<center>
+<a href=frame1-1.htm>
+<img src=GIF/SIDEBAR/a-l.gif border=0></a>
+<a href=frame1-3.htm>
+<img src=GIF/SIDEBAR/a-r.gif border=0></a>
+<p>
+
+<a href=../VOL1/welcome.htm target=main
+        onmouseover="window.status='盒子第一期：我們共浴吧！依莎貝爾';hiLite('vol1','vol1');return true"
+        onmouseout="hiLite('vol1','vol1t')">
+<img src=GIF/VOL2/vol1.gif width=50 border=0 name="vol1" alt="連往盒子第一期"><br>
+<font size=-2>第一期</font></a><p>
+
+<a href=../VOL1/welcome.htm target=main
+        onmouseover="window.status='盒子第一期：我們共浴吧！依莎貝爾';hiLite('vol1','vol1');return true"
+        onmouseout="hiLite('vol1','vol1t')"></a><a href=../VOL2/welcome.htm target=main
+        onmouseover="window.status='盒子第二期：失去一種觀視的角度';hiLite('vol2','vol2');return true"
+        onmouseout="hiLite('vol2','vol2t')">
+<img src=GIF/VOL2/vol2.gif width=50 border=0 name="vol2" alt="連往盒子第二期"><br>
+<font size=-2>第二期</font></a><p>
+
+<a href=../VOL2/welcome.htm target=main
+        onmouseover="window.status='盒子第二期：失去一種觀視的角度';hiLite('vol2','vol2');return true"
+        onmouseout="hiLite('vol2','vol2t')"></a><a href=../VOL3/welcome.htm target=main
+        onmouseover="window.status='盒子第三期：瓦楞紙盒子包著牛皮紙冊子';hiLite('vol3','vol3');return true"
+        onmouseout="hiLite('vol3','vol3t')">
+<img src=GIF/VOL2/vol3.gif width=50 border=0 name="vol3" alt="連往盒子第三期"><br>
+<font size=-2>第三期</font></a><p>
+
+
+<a href=../VOL3/welcome.htm target=main
+        onmouseover="window.status='盒子第三期：瓦楞紙盒子包著牛皮紙冊子';hiLite('vol3','vol3');return true"
+        onmouseout="hiLite('vol3','vol3t')"></a><a href=../VOL4/welcome.htm target=main
+        onmouseover="window.status='盒子第四期：政大愛情故事';hiLite('vol4','vol4');return true"
+        onmouseout="hiLite('vol4','vol4t')">
+<img src=GIF/VOL2/vol4.gif width=50 border=0 name="vol4" alt="連往盒子第四期"><br>
+<font size=-2>第四期</font><p></a>
+
+</center>
+</td></tr></table>
+</BODY></HTML>

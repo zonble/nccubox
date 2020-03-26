@@ -1,0 +1,83 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+<META NAME="Content-Language"	CONTENT="zh-TW">
+<META NAME="Coverage" 		CONTENT="Taiwan">
+<HTML VERSION = "-//IETF/DTD HTML//EN//3.2">
+<TITLE></TITLE>
+</HEAD>
+<BODY BGCOLOR="#a0a0a0" background=GIF/bar-bg.gif>
+
+<script language="javascript">
+<!--
+function launchTOOL(){
+   window.open("./frame3.htm","TOOL","status=no,toolbar=no,scrollbars=no,width=480,height=100")
+}
+function launchVOLS(){
+   window.open("./frame4.htm","VOLS","status=no,toolbar=no,scrollbars=no,width=220,height=260")
+}
+//-->
+</script>
+
+<!--Java-->
+<script language="JavaScript">
+<!---
+//檢查是否為Netscape Navigator 3.0版以上
+agent = navigator.userAgent;
+browserVer = 2;
+if (agent.substring(0,7) == "Mozilla")
+{
+    if (parseInt(agent.substring(8,9)) >= 3) {browserVer = 1;}
+}
+
+// 預先載入圖片
+if (browserVer == 1) {
+B1 = new Image(100,20);
+B1.src = "GIF/SIDEBAR2/b1-b.gif";
+B1t = new Image(100,20);
+B1t.src = "GIF/SIDEBAR2/b1.gif";
+B2 = new Image(100,20);
+B2.src = "GIF/SIDEBAR2/b2-b.gif";
+B2t = new Image(100,20);
+B2t.src = "GIF/SIDEBAR2/b2.gif";
+B3 = new Image(100,20);
+B3.src = "GIF/SIDEBAR2/b3-b.gif";
+B3t = new Image(100,20);
+B3t.src = "GIF/SIDEBAR2/b3.gif";
+B4 = new Image(100,20);
+B4.src = "GIF/SIDEBAR2/b4-b.gif";
+B4t = new Image(100,20);
+B4t.src = "GIF/SIDEBAR2/b4.gif";
+}
+
+function hiLite(imgDocID,imgObjName) {
+//  mouseOver 事件驅動icon change
+//   imgDocID - the name or number of the document image to be replaced
+//   imgObjName - the name of the image object to be swapped in
+
+if (browserVer == 1) {
+document.images[imgDocID].src = eval(imgObjName + ".src");
+}
+}
+//---->
+</script>
+
+<img src=GIF/SIDEBAR2/side.gif align=right>
+
+<A HREF="javascript:launchTOOL()"
+	onmouseover="window.status='啟動浮動檢視工具列';hiLite('B1','B1');return true"
+        onmouseout="hiLite('B1','B1t')">
+	<img src=GIF/SIDEBAR2/b1.gif border=0 alt=浮動檢視工具列 name=B1></A>
+<A HREF="welcome2.htm" target=_top
+	onmouseover="window.status='移除檢視工具列';hiLite('B2','B2');return true"
+        onmouseout="hiLite('B2','B2t')">
+	<img src=GIF/SIDEBAR2/b2.gif border=0 alt=移除檢視工具列 name=B2></A>
+<A HREF="welcome.htm" target=_top
+	onmouseover="window.status='不分欄顯示文件內容';hiLite('B3','B3');return true"
+        onmouseout="hiLite('B3','B3t')">
+	<img src=GIF/SIDEBAR2/b3.gif border=0 alt=不分欄顯示 name=B3></A>
+<A HREF="javascript:launchVOLS()"
+	onmouseover="window.status='啟動浮動期數索引工具列';hiLite('B4','B4');return true"
+        onmouseout="hiLite('B4','B4t')">
+	<img src=GIF/SIDEBAR2/b4.gif border=0 alt=浮動期數索引工具列 name=B4></A>
+</BODY></HTML>

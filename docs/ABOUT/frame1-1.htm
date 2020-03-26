@@ -1,0 +1,78 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+<META NAME="Content-Language"	CONTENT="zh-TW">
+<META NAME="Coverage" 		CONTENT="Taiwan">
+<HTML VERSION = "-//IETF/DTD HTML//EN//3.2">
+<TITLE></TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<!--Java-->
+<script language="JavaScript">
+<!---
+//檢查是否為Netscape Navigator 3.0版以上
+agent = navigator.userAgent;
+browserVer = 2;
+if (agent.substring(0,7) == "Mozilla")
+{
+    if (parseInt(agent.substring(8,9)) >= 3) {browserVer = 1;}
+}
+
+// 預先載入圖片
+if (browserVer == 1) {
+chnnl = new Image(60,70);
+chnnl.src = "GIF/SIDEBAR/chnnl-b.gif";
+chnnlt = new Image(60,70);
+chnnlt.src = "GIF/SIDEBAR/chnnl.gif";
+search = new Image(60,70);
+search.src = "GIF/SIDEBAR/search-b.gif";
+searcht = new Image(60,70);
+searcht.src = "GIF/SIDEBAR/search.gif";
+help = new Image(60,70);
+help.src = "GIF/SIDEBAR/help-b.gif";
+helpt = new Image(60,70);
+helpt.src = "GIF/SIDEBAR/help.gif";
+}
+
+function hiLite(imgDocID,imgObjName) {
+//  mouseOver 事件驅動icon change
+//   imgDocID - the name or number of the document image to be replaced
+//   imgObjName - the name of the image object to be swapped in
+
+if (browserVer == 1) {
+document.images[imgDocID].src = eval(imgObjName + ".src");
+}
+}
+//---->
+</script>
+
+<table border=0><tr><td>
+<center>
+<a href=frame1.htm>
+<img src=GIF/SIDEBAR/a-l.gif border=0></a>
+<a href=frame1-2.htm>
+<img src=GIF/SIDEBAR/a-r.gif border=0></a>
+<p>
+
+<a href=DOCS/CHANNEL/.htm target=main
+        onmouseover="window.status='訂閱盒子頻道';hiLite('chnnl','chnnl');return true"
+        onmouseout="hiLite('chnnl','chnnlt')">
+<img src=GIF/SIDEBAR/chnnl.gif width=50 border=0 name="chnnl" alt="訂閱「盒子」，加入您的頻道"><br>
+<font size=-2>訂閱盒子</font><p></a>
+
+<a href=SEARCH/query.htm target=main
+        onmouseover="window.status='連往「盒子．道南生活網路誌」全文索引';hiLite('search','search');return true"
+        onmouseout="hiLite('search','searcht')">
+<img src=GIF/SIDEBAR/search.gif width=50 border=0 name="search" alt="連往全文索引"><br>
+<font size=-2>全文索引</font><p></a>
+
+<a href=../nethelp/welcome.htm target=main
+        onmouseover="window.status='連往「盒子．道南生活網路誌」輔助說明';hiLite('help','help');return true"
+        onmouseout="hiLite('help','helpt')">
+<img src=GIF/SIDEBAR/help.gif width=50 border=0 name="help" alt="連往輔助說明"><br>
+<font size=-2>輔助說明</font><p></a>
+
+</center>
+</td></tr></table>
+</BODY></HTML>

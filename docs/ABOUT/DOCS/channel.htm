@@ -1,0 +1,77 @@
+<HTML>
+<HEAD><TITLE>(訂閱你的盒子)</TITLE>
+</HEAD>
+
+<Script language="JavaScript">
+<!--//
+var navapp = navigator.appName;
+var app = navigator.appVersion;
+function Check1(){
+	if (navapp.substring(0,8) == "Netscape"){
+		window.alert('您的瀏覽器是 Netscape Navigator' + app.substring(0,4) +'版\n不是 Internet Explorer，請您更換瀏覽器後，\n再來訂閱\「盒子．道南生活網路誌」。')
+		;return}
+	else Check2()
+		}
+function Check2(){
+	if (navapp.substring(0,9) == "Microsoft"){
+		Check3()}
+		}
+function Check3(){
+	if (parseInt(app.substring(0,2)) < 4){
+		window.alert('您的 Internet Explorer 是 2.0 或 3.0 版，\n不是 4.0 版，請您在更換瀏覽器後，\n再來訂閱\「盒子．道南生活網路誌」。')
+		;return}
+		}
+function Check4(){
+	if (parseInt(app.substring(0,2)) < 4){
+		window.alert('您的瀏覽器並不是Internet Explorer 4.0\n請您更新您的瀏覽器之後，再來訂閱 \n「盒子．道南生活網路誌」。')
+		;return}
+	else window.open('box.cdf','main','')
+		}
+//-->
+</script>
+
+
+
+<BODY BGCOLOR="#00aaaa" background=../GIF/bg.gif>
+<center>
+<table width=480><tr><td>
+<img src=../GIF/box.gif align=right>
+<img src=../GIF/subt.gif alt="訂閱你的盒子"><p>
+<img src=../GIF/cyanball.gif><b>
+<font color=#FFff80>
+【盒子支援頻道功能！】
+</font></b><img src=../GIF/cyanball.gif><p>
+
+<img src=../GIF/cyan2.gif>
+「盒子．道南生活網路誌」支援微軟的「頻道」（CHANNEL/）功能。
+透過「頻道」功能，您可以在「盒子」更新資料時，自動將資料抓回
+您的電腦，同時瀏覽網頁就像是看切換頻道電視一樣。您不妨<a href=check.htm>檢查
+一下您的瀏覽器</a>是不是Internet Explorer 4.0。<p>
+
+<img src=../GIF/cyan2.gif>
+您必須安裝微軟探險家 Internet Explorer 4.0 以及Active CHANNEL/
+軟體才能使用「頻道」功能。目前「盒子」並不支援
+Netscape NetCaster的頻道功能<p>
+
+<img src=../GIF/cyanball.gif><b>
+<font color=#FFff80>
+【現在就加入您的頻道！】
+</font></b><img src=../GIF/cyanball.gif><p>
+
+<!--<a href="javascript:Check1()">-->
+
+<a href="box.cdf">
+<img src=../GIF/sub.gif border=0 alt="訂閱" align=left hspace=3 vspace=5></a>
+
+<img src=../GIF/cyan2.gif>
+請點選旁邊的圖示，就可以將「盒子」加入您的頻道當中！感受不同於
+以往瀏覽網頁的特殊效果！如果您對「盒子」的頻道功能有任何建議，
+請寄信到：<a href=mailto:zonble@jour.nccu.edu.tw>
+zonble@jour.nccu.edu.tw</a><p>
+
+您也可以按一下
+<A HREF="../../nethelp/help05.htm">
+這裡</a>進一步瞭解如何使用頻道功能。<p>
+
+</table></tr></td></center>
+</BODY></HTML>

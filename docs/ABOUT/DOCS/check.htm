@@ -1,0 +1,63 @@
+<HTML>
+<HEAD><TITLE>(檢查瀏覽器)</TITLE>
+</HEAD>
+<BODY BGCOLOR="#00aaaa" background=../GIF/bg.gif>
+<center>
+<table width=480><tr><td>
+<img src=../GIF/box.gif align=right>
+<h3>
+檢查您的瀏覽器版本
+</h3>
+<img src=../GIF/cyanball.gif>
+在這邊您可以檢查一下您的瀏覽器版本，看看是否是微軟 Internet
+Explorer 4.0 瀏覽器軟體，如果不是的話，您就無法使用「盒子．
+道南生活網路誌」所提供 Push 網站技術的訂閱功能。而「盒子」目
+前並不支援 Netscape NetCaster 的 Push 技術。<p>
+
+<img src=../GIF/cyanball.gif>
+<b>您的瀏覽器版本資訊如下：</b>
+
+<Script Language=JavaScript>
+<!--
+//1997 by zonble
+navapp = navigator.appName;
+app = navigator.appVersion;
+
+function Check(){
+document.write("<table width=440 border=0>");
+document.write("<tr><td width=120><div align=right>您的瀏覽器是</div></td>");
+document.write("<td width=320><font face=Arial>", navapp , "</font></td></tr>");
+document.write("<tr><td width=120><div align=right>瀏覽器版本是</div></td>");
+document.write("<td width=320><font face=Arial>", app , "</font></td></tr>");
+document.write("</table><p>");
+                }
+function Check1(){
+	if (navapp.substring(0,8) == "Netscape"){
+document.write('<img src=../GIF/cyanball.gif>您的瀏覽器是 Netscape Navigator' + app.substring(0,4) +'版\n不是 Internet Explorer，請您更換瀏覽器後，\n再來訂閱\「盒子．道南生活網路誌」。<p>')
+		;return}
+	else Check2()
+		}
+function Check2(){
+	if (navapp.substring(0,9) == "Microsoft"){
+document.write('<img src=../GIF/cyanball.gif>您的 Internet Explorer 是 2.0 或 3.0 版，\n不是 4.0 版，請您在更換瀏覽器後，\n再來訂閱\「盒子．道南生活網路誌」。<p>')
+		;return}
+	else Check3()
+		}
+function Check3(){
+	if (parseInt(app.substring(0,2)) < 4){
+document.write('<img src=../GIF/cyanball.gif>您的瀏覽器並不是Internet Explorer 4.0\n請您更新您的瀏覽器之後，再來訂閱 \n「盒子．道南生活網路誌」。<p>')
+		;return}
+	else Check4()
+		}
+function Check4(){
+	document.write('<img src=../GIF/cyanball.gif>您的瀏覽器是 Internet Explorer' + app.substring(0,4)+ '，請將「盒子」加入您的頻道列裡頭吧！<p>');
+		 }
+Check();
+Check1();
+//-->
+</Script>
+
+</td></tr>
+</table></tr></td></center>
+</BODY>
+</HTML>
