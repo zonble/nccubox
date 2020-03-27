@@ -1,234 +1,171 @@
 <HTML>
-  <META
-    NAME="Author-Corporate"
-    CONTENT="地下兵工廠">
-  <META
-    NAME="Author"
-    CONTENT="楊維中">
-  <META
-    NAME="Publisher"
-    CONTENT="楊維中/地下兵工廠">
-  <META
-    NAME="Publisher-Email"
-    CONTENT="zonble@jour.nccu.edu.tw">
-  <META
-    NAME="Generator"
-    CONTENT="Personal
-    Editor
-    II">
-  <META
-    NAME="Description"
-    CONTENT="盒子．道南生活網路誌歡迎畫面">
-  <META
-    NAME="Keywords"
-    CONTENT="Welcome,
+
+<HEAD>
+    <META NAME="Author-Corporate" CONTENT="地下兵工廠">
+    <META NAME="Author" CONTENT="楊維中">
+    <META NAME="Publisher" CONTENT="楊維中/地下兵工廠">
+    <META NAME="Publisher-Email" CONTENT="zonble@jour.nccu.edu.tw">
+    <META NAME="Generator" CONTENT="Personal Editor II">
+    <META NAME="Description" CONTENT="盒子．道南生活網路誌歡迎畫面">
+    <META NAME="Keywords" CONTENT="Welcome,
     Homepage,
     首頁,
     歡迎,
     盒子,
     道南生活網路誌">
-  <META
-    NAME="Copyright"
-    CONTENT="「盒子．道南生活網路誌」所有圖形文字內容由地下兵工廠製作，未經許可不得用於商業用途">
-  <META
-    HTTP-EQUIV="Content-Type"
-    CONTENT="text/html;
+    <META NAME="Copyright" CONTENT="「盒子．道南生活網路誌」所有圖形文字內容由地下兵工廠製作，未經許可不得用於商業用途">
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html;
     charset=utf8">
-  <META
-    NAME="Content-Language"
-    CONTENT="zh-TW">
-  <META
-    NAME="Coverage"
-    CONTENT="Taiwan">
-  <HTML
-    VERSION="-//IETF/DTD
+    <META NAME="Content-Language" CONTENT="zh-TW">
+    <META NAME="Coverage" CONTENT="Taiwan">
+    <HTML VERSION="-//IETF/DTD
     HTML//EN//3.2">
-    <HEAD><TITLE>(盒子．道南生活網路誌歡迎畫面)</TITLE>
-    </HEAD>
-    <script
-      language="JavaScript">
-<!---
-//檢查是否為Netscape Navigator 3.0版以上
-agent = navigator.userAgent;
-browserVer = 2;
-if (agent.substring(0,7) == "Mozilla")
-{
-    if (parseInt(agent.substring(8,9)) >= 3) {browserVer = 1;}
-}
+    <TITLE>(盒子．道南生活網路誌歡迎畫面)</TITLE>
+    <script language="JavaScript">
+        //檢查是否為Netscape Navigator 3.0版以上
+        agent = navigator.userAgent;
+        browserVer = 2;
+        if (agent.substring(0, 7) == "Mozilla") {
+            if (parseInt(agent.substring(8, 9)) >= 3) {
+                browserVer = 1;
+            }
+        }
 
-// 預先載入圖片
-if (browserVer == 1) {
-Vol7 = new Image(110,101);
-Vol7.src = "GIF/VOLS/vol7.gif";
-Vol7t = new Image(110,101);
-Vol7t.src = "GIF/VOLS/vol7-b.gif";
+        // 預先載入圖片
+        if (browserVer == 1) {
+            Vol7 = new Image(110, 101);
+            Vol7.src = "GIF/VOLS/vol7.gif";
+            Vol7t = new Image(110, 101);
+            Vol7t.src = "GIF/VOLS/vol7-b.gif";
+        }
 
-}
+        function hiLite(imgDocID, imgObjName) {
+            //  mouseOver 事件驅動icon change
+            //  imgDocID - the name or number of the document image to be replaced
+            //  imgObjName - the name of the image object to be swapped in
 
-function hiLite(imgDocID,imgObjName) {
-//  mouseOver 事件驅動icon change
-//  imgDocID - the name or number of the document image to be replaced
-//  imgObjName - the name of the image object to be swapped in
+            if (browserVer == 1) {
+                document.images[imgDocID].src = eval(imgObjName + ".src");
+            }
+        }
+    </script>
+    <SCRIPT LANGUAGE="JavaScript">
+        var scrtxt = "歡迎光臨這一份屬於政大人的網路多媒體電子刊物……「盒子．道南生活網路誌」！！       ";
+        var lentxt = scrtxt.length;
+        var width = 640;
+        var count = 0;
+        var left = 0;
+        var abc = 0;
 
-if (browserVer == 1) {
-document.images[imgDocID].src = eval(imgObjName + ".src");
-}
-}
-//---->
-</script>
-    <SCRIPT
-      LANGUAGE="JavaScript"><!--
-var scrtxt="歡迎光臨這一份屬於政大人的網路多媒體電子刊物……「盒子．道南生活網路誌」！！       ";
-var lentxt=scrtxt.length;
-var width=640;
-var count=0;
-var left=0;
-var abc=0;
+        function scroll() {
+            var txt = "";
+            var scroller = "";
+            if (abc > 0) {
+                if ((abc % 2) == 1) {
+                    window.status = "";
+                } else {
+                    window.status = scrtxt;
+                }
+                abc++;
+                if (abc == 8) abc = 0;
+            } else {
+                if (count > 0) {
+                    scroller = scrtxt.substring(0, count);
+                    txt = scrtxt.substring(count, count + 1);
+                } else {
+                    txt = scrtxt.substring(0, 1);
+                }
+                if ((width - left) > 2) {
+                    left += (width - left) / 2;
+                } else {
+                    left++;
+                }
+                for (var i = 0; i < (width - left); i++) {
+                    scroller = scroller + " ";
+                }
+                if (left >= width) {
+                    count += 2;
+                    left = count * 2;
+                }
+                if (count >= lentxt) {
+                    pos = count = 0;
+                    abc = 1;
+                }
+                scroller = scroller + txt;
+                window.status = scroller;
+            }
+            setTimeout("scroll()", 0);
+        }
+    </SCRIPT>
+</HEAD>
 
-function scroll() {
-  var txt="";
-  var scroller="";
-  if (abc>0) {
-    if ((abc%2)==1) {
-      window.status="";
-    } else {
-      window.status=scrtxt;
-    }
-    abc++;
-    if (abc==8) abc=0;
-  } else {
-    if (count>0) {
-      scroller=scrtxt.substring(0,count);
-      txt=scrtxt.substring(count,count+1);
-    } else {
-      txt=scrtxt.substring(0,1);
-    }
-    if ((width-left)>2) {
-      left+=(width-left)/2;
-    } else { left++; }
-    for (var i=0; i<(width-left); i++) {
-      scroller=scroller+" ";
-    }
-    if (left>=width) {
-      count+=2;
-      left=count*2;
-    }
-    if (count>=lentxt) {
-      pos=count=0;
-      abc=1;
-    }
-    scroller=scroller+txt;
-    window.status=scroller;
-  }
-    setTimeout("scroll()",0);
-}
-
-//--></SCRIPT>
-    <BODY
-      BGCOLOR="#00AAAA"
-      background=GIF/bg.gif
-      onload="scroll();return
+<BODY BGCOLOR="#00AAAA" background="GIF/bg.gif" onload="scroll();return
       true;">
-      <bgsound
-        src=WAV/macstart.wav><!--MSIE背景音樂-->
-        <embed
-          src=WAV/macstart.wav
-          hidden=true><!--Netscape背景音樂-->
-        <center>
-          <table
-            width=480>
-            <tr><td
-                width=260>
-                <table
-                  width=260
-                  border=5
-                  cellpadding=0><tr><td>
-                      <center>
-                        <hr
-                          size=3>
-                        <A
-                          href=index.htm>
-                          <img
-                            src=GIF/logo.gif
-                            alt="盒子
-                            道南生活網路誌"
-                            border=0><p>
-                          </a>
-                          <b>盒子．道南生活網路誌</b><br>
-                          <font
-                            size=-1>
-                            民國八十六年四月至十二月。<p>
-                              我們想將道南橋這端的林林總種，<br>
-                              裝在個盒子裡，<br>
-                              所以，這就是我們的「盒子」。
-                              <hr
-                                size=3></font>
-                          </center>
-                        </td></tr></table><p>
-                    </td>
-                    <td
-                      wodth=20></td>
-                    <td
-                      width=200>
-                      <center>
-                        <img
-                          src=GIF/banner.gif
-                          alt=當期盒子><p>
-                          <a
-                            href="../VOL7/welcome.htm"
-                            onmouseover="window.status='第七期「聞起來像是政大精神」';hiLite('Vol7','Vol7t');return
-                            true"
-                            onmouseout="hiLite('Vol7','Vol7')">
-                            <img
-                              src="GIF/VOLS/vol7.gif"
-                              border=0
-                              name="Vol7"></a></center>
+    <bgsound src=WAV/macstart.wav> </bgsound> <embed src=WAV/macstart.wav hidden=true>
+    <center>
+        <table width=480>
+            <tr>
+                <td width=260>
+                    <table width=260 border=5 cellpadding=0>
+                        <tr>
+                            <td>
+                                <center>
+                                    <hr size=3>
+                                    <A href=index.htm>
+                                        <img src=GIF/logo.gif alt="盒子
+                          道南生活網路誌" border=0>
+
+                                    </a>
+                                    <p>
+                                        <b>盒子．道南生活網路誌</b></p>
+                                    <font size=-1>
+                                        民國八十六年四月至十二月。
+                                        <p>
+                                            我們想將道南橋這端的林林總種，<br> 裝在個盒子裡，
+                                            <br> 所以，這就是我們的「盒子」。
+                                        </p>
+                                        <hr size=3>
+                                    </font>
+                                </center>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td width=20></td>
+                <td width=200>
+                    <center>
+                        <img src=GIF/banner.gif alt=當期盒子>
                         <p>
-                          <font
-                            size=-1>
-                            「盒子．道南生活網路誌」決定以「
-                            <a
-                              href=../VOL7/welcome.htm>
-                              聞起來就像是政大經神</a>」結束。
-                            <a
-                              href=../VOL7/thanx.htm>
-                              感謝</a>各位這段期間的支持。<p></font>
-                            <a
-                              href=index.htm>
-                              <img
-                                src=GIF/SIDEBAR/a1.gif
-                                border=0
-                                alt=盒子主畫面>
-                            </a>
-                            <center>
-                              <img
-                                src=GIF/cyan2.gif>
-                              <a
-                                href=vols.htm>
-                                盒子網路誌期數索引</a><br>
-                              <img
-                                src=GIF/cyan2.gif>
-                              <a
-                                href=SEARCH/query.htm>
-                                盒子網路誌全文索引</a><br>
-                              <img
-                                src=GIF/cyan2.gif>
-                              <a
-                                href=DOCS/channel.htm>
-                                訂閱盒子網路誌頻道</a><br>
-                              <img
-                                src=GIF/cyan2.gif>
-                              <a
-                                href=../NETHELP/welcome.htm>
-                                盒子網路誌線上說明</a><br>
-                            </center>
-                            <img
-                              src=GIF/banner2.gif>
-                          </td></tr>
-                      </table>
+                            <a href="../VOL7/welcome.htm" onmouseover="window.status='第七期「聞起來像是政大精神」';hiLite('Vol7','Vol7t');return
+                          true" onmouseout="hiLite('Vol7','Vol7')">
+                                <img src="GIF/VOLS/vol7.gif" border=0 name="Vol7"></a>
+                        </p>
                     </center>
-                  </td></tr>
-              </table>
-            </center>
-          </BODY>
-        </HTML>
+                    <p>
+                        <font size=-1>
+                            「盒子．道南生活網路誌」決定以「
+                            <a href=../VOL7/welcome.htm> 聞起來就像是政大精神</a>」結束。 <a href=../VOL7/thanx.htm> 感謝</a>各位這段期間的支持。
+                        </font>
+                    </p>
+                    <a href=index.htm>
+                        <img src=GIF/SIDEBAR/a1.gif border=0 alt=盒子主畫面>
+                    </a>
+                    <p></p>
+                    <center>
+                        <img src=GIF/cyan2.gif> <a href=vols.htm>
+                盒子網路誌期數索引</a><br>
+                        <img src=GIF/cyan2.gif> <a href=SEARCH/query.htm> 盒子網路誌全文索引</a> <br>
+                        <img src=GIF/cyan2.gif> <a href=DOCS/channel.htm> 訂閱盒子網路誌頻道</a> <br>
+                        <img src=GIF/cyan2.gif> <a href=../NETHELP/welcome.htm> 盒子網路誌線上說明</a> <br>
+                    </center>
+                    <img src=GIF/banner2.gif>
+                </td>
+            </tr>
+        </table>
+    </center>
+    </td>
+    </tr>
+    </table>
+</BODY>
+
+</HTML>
